@@ -24,7 +24,7 @@
     }
 
     .companyStyle{
-        @apply flex justify-between items-center md:visible md:justify-center shadow-md py-4 md:py-0 md:shadow-none border-t-2 md:border-t-0 md:border-x-2 border-menuborder px-1;
+        @apply flex justify-between items-center md:visible md:justify-center shadow-md py-4 md:py-0 md:shadow-none border-t md:border-t-0 md:border-x border-menuborder px-1;
     }
 
     .btnCreateNew{
