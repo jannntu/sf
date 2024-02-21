@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperFaktúra</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="index.js"></script>
+</head>
+<body class="text-white font-mukta">
+    <div class="">
+        <div class="bg-white h-36 md:h-28 w-full">
+            <div class="md:mx-10 bg-white h-full md:grid md:grid-cols-3">
+                <div class="flex p-4 md:p-0 items-center justify-between">
+                    <img class="h-14" src = "img\Logo_Superfaktura.png" alt="Logo Superfaktura SVG"/>
+                    <div class="md:hidden flex items-center gap-2">
+                        <img class="w-7 h-7 bg-navbg p-2 rounded-full" src = "img\Company.svg" alt="Company SVG"/>
+                        <img class="w-7 h-7 bg-navbg p-2 rounded-full" src = "img\Avatar.svg" alt="Avatar SVG"/>
+                        <img id="mainNavbarLink" class="w-7 h-7 bg-navbg p-2 rounded-full" src = "img\Company.svg" alt="Company SVG"/>
+                    </div>
+                </div>
+                <div id="searchInput" class="hidden items-center px-3 md:px-0 md:flex">
+                    <div class="h-10 w-full flex">
+                        <div class="relative w-full">
+                            <input type="search"  
+                                class="relative block p-2.5 w-full flex-auto text-gray-900 bg-gray-100 rounded-full" 
+                                placeholder="Vyhľadať faktúru, firmu, kontakt..." />
+                            <button type="submit" class="absolute top-1/2 end-0 transform -translate-y-1/2 
+                            flex bg-buttonblue items-center justify-center rounded-full mr-2 w-6 h-6">
+                                <img class="w-5 h-5" src = "img\Search.svg" alt="Search SVG"/>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:flex items-center bg-white text-black text-smdd justify-end">
+                    <div class="md:flex md:justify-center font-normal">
+                        <a href="/" class="hidden md:flex justify-center pr-1">
+                            <img class="w-4 h-4" src = "img\Help.svg" alt="Help SVG"/>
+                            <span class="px-1">
+                                Nápoveda
+                            </span>
+                        </a>
+                        <a href="/" id="companyId" class="flex justify-between md:visible md:justify-center shadow-md py-4 md:py-0 md:shadow-none border-t-2 md:border-t-0 md:border-x-2 border-menuborder px-1">
+                            <div class="flex">
+                                <img class="w-5 h-5 md:w-4 md:h-4 bg-navbg md:bg-white p-1 md:p-0 rounded-full md:rounded-none" src = "img\Company.svg" alt="Company SVG"/>
+                                <span class="px-1">
+                                    The Walt Disney Company
+                                </span>
+                            </div>
+                            <img class="w-4 h-4" src = "img\Arrow.svg" alt="Arrow SVG"/>
+                        </a>
+                        <a href="/" class="hidden md:flex justify-center pl-1">
+                            <img class="w-4 h-4" src = "img\Avatar.svg" alt="Avatar SVG"/>
+                            <span class="px-1">
+                                Môj profil
+                            </span>
+                            <img class="w-4 h-4" src = "img\Arrow.svg" alt="Arrow SVG"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mainNavbar" class="md:bg-navbg hidden md:h-12 h-auto w-full md:flex justify-between items-center md:px-52">
+            <div class="md:flex justify-start md:h-12 h-auto w-full text-navtext gap-3 text-sm font-bold">
+                <button class="hover:bg-navhover  hover:text-white h-12 w-full md:w-auto uppercase rounded-t-sm px-3 md:py-4">
+                    <div class="w-full border-b md:border-b-0 h-12 md:h-auto flex items-center justify-between md:justify-normal">
+                    <div class="flex">
+                        <img class="w-5 h-5 md:hidden" src = "img\Prehlady.svg" alt="Prehlady SVG"/>
+                        <span class="ml-2 md:ml-0">Prehľady</span>
+                    </div>
+                    <img class="w-4 h-4 md:hidden" src = "img\Arrow.svg" alt="Arrow SVG"/>
+                </div>
+                </button>
+                <button  id="subNavbarLink" class="hover:bg-navhover  hover:text-white h-12 w-full md:w-auto uppercase rounded-t-sm px-3 md:py-4">
+                    <div class="w-full border-b md:border-b-0 h-12 md:h-auto flex items-center justify-between md:justify-normal">
+                    <div class="flex">
+                        <img class="w-5 h-5 md:hidden" src = "img\Faktura.svg" alt="Faktura SVG"/>
+                        <span class="ml-2 md:ml-0">Faktúry</span>
+                    </div>
+                    <img class="w-4 h-4 md:hidden" src = "img\Arrow.svg" alt="Arrow SVG"/>
+                </div>
+                </button>
+                <button class="hover:bg-navhover  hover:text-white h-12 w-full md:w-auto uppercase rounded-t-sm px-3 md:py-4">
+                    <div class="w-full border-b md:border-b-0 h-12 md:h-auto flex items-center justify-between md:justify-normal">
+                    <div class="flex">
+                        <img class="w-5 h-5 md:hidden" src = "img\Naklady.svg" alt="Naklady SVG"/>
+                        <span class="ml-2 md:ml-0">Náklady</span>
+                    </div>
+                    <img class="w-4 h-4 md:hidden" src = "img\Arrow.svg" alt="Arrow SVG"/>
+                </div>
+                </button>
+                <button class="hover:bg-navhover  hover:text-white h-12 w-full md:w-auto uppercase rounded-t-sm px-3 md:py-4">
+                    <div class="w-full border-b md:border-b-0 h-12 md:h-auto flex items-center justify-between md:justify-normal">
+                    <div class="flex">
+                        <img class="w-5 h-5 md:hidden" src = "img\Contact.svg" alt="Contact SVG"/>
+                        <span class="ml-2 md:ml-0">Kontakty</span>
+                    </div>
+                    <img class="w-4 h-4 md:hidden" src = "img\Arrow.svg" alt="Arrow SVG"/>
+                </div>
+                </button>
+                <button class="hover:bg-navhover  hover:text-white h-12 w-full md:w-auto uppercase rounded-t-sm px-3 md:py-4">
+                    <div class="w-full border-b md:border-b-0 h-12 md:h-auto flex items-center justify-between md:justify-normal">
+                        <div class="flex">
+                            <img class="w-5 h-5 md:hidden" src = "img\Tool.svg" alt="Tool SVG"/>
+                            <span class="ml-2 md:ml-0">Nástroje</span>
+                        </div>
+                        <img class="w-4 h-4 md:hidden" src = "img\Arrow.svg" alt="Arrow SVG"/>
+                    </div>
+                </button>
+                <button class="md:hidden hover:bg-navhover  hover:text-white h-12 w-full md:w-auto uppercase rounded-t-sm px-3 md:py-4">
+                    <div class="w-full border-b md:border-b-0 h-12 md:h-auto flex items-center justify-between md:justify-normal">
+                        <div class="flex">
+                            <img class="w-5 h-5 md:hidden" src = "img\Help.svg" alt="Help SVG"/>
+                            <span class="ml-2 md:ml-0">Nápoveda</span>
+                        </div>
+                        <img class="w-4 h-4 md:hidden" src = "img\Arrow.svg" alt="Arrow SVG"/>
+                    </div>
+                </button>
+            </div>
+            <button class="h-12 min-w-max max-w-40 text-white px-4 py-3 bg-buttonblue hidden md:flex items-center ">
+                <img class="w-4 h-4 mr-1" src = "img\AddWhite.svg" alt="Add SVG"/>
+                <span class="text-sm">
+                    Vytvoriť nový
+                </span>
+            </button>
+        </div>
+    </div>
+    <div id="subNavbar" class="hidden">
+        <div class="bg-navhover flex h-12 w-full justify-between items-center text-subnavtext px-52">
+            <div class="group relative hover:text-white h-12 flex justify-center items-center rounded-t-sm px-3 py-4">
+                <span>Faktúry</span>
+                <div class="triangle"></div>
+            </div>
+            <div class="group relative hover:text-white h-12  flex justify-center items-center rounded-t-sm px-3 py-4">
+                <span>Zálohové faktúry</span>
+                <div class="triangle"></div>
+            </div>
+            <div class="group relative hover:text-white h-12  flex justify-center items-center rounded-t-sm px-3 py-4">
+                <span>Dodacie listy</span>
+                <div class="triangle"></div>
+            </div>
+            <div class="group relative hover:text-white h-12  flex justify-center items-center rounded-t-sm px-3 py-4">
+                <span>Prijaté objednávky</span>
+                <div class="triangle"></div>
+            </div>
+            <div class="group relative hover:text-white h-12  flex justify-center items-center rounded-t-sm px-3 py-4">
+                <span>Cenové ponuky</span>
+                <div class="triangle"></div>
+            </div>
+            <div class="group relative hover:text-white h-12  flex justify-center items-center rounded-t-sm px-3 py-4">
+                <span>Pravidelné</span>
+                <div class="triangle"></div>
+            </div>
+            <div class="group relative hover:text-white h-12  flex justify-center items-center rounded-t-sm px-3 py-4">
+                <span>Dobropisy</span>
+                <div class="triangle"></div>
+            </div>
+            <div class="group relative hover:text-white h-12  flex justify-center items-center rounded-t-sm px-3 py-4">
+                <span>Koncepty</span>
+                <div class="triangle"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
