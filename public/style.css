@@ -628,6 +628,7 @@ video {
 
 .companyStyle{
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-top-width: 2px;
   --tw-border-opacity: 1;
@@ -994,6 +995,10 @@ video {
 
   .md\:w-4{
     width: 1rem;
+  }
+
+  .md\:w-96{
+    width: 24rem;
   }
 
   .md\:min-w-72{
