@@ -1088,6 +1088,10 @@ video {
     width: auto;
   }
 
+  .md\:min-w-72{
+    min-width: 18rem;
+  }
+
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1102,6 +1106,22 @@ video {
 
   .md\:justify-center{
     justify-content: center;
+  }
+
+  .md\:gap-2{
+    gap: 0.5rem;
+  }
+
+  .md\:gap-3{
+    gap: 0.75rem;
+  }
+
+  .md\:gap-4{
+    gap: 1rem;
+  }
+
+  .md\:gap-5{
+    gap: 1.25rem;
   }
 
   .md\:rounded-none{
@@ -1158,6 +1178,10 @@ video {
   .md\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .md\:pr-2{
+    padding-right: 0.5rem;
   }
 
   .md\:shadow-none{

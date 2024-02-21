@@ -24,48 +24,50 @@
                             <img onclick="showCloseMenu()" class="w-4 h-4" src = "img\Close.svg" alt="Close SVG"/>
                         </div>
                     </div>
-                    <div id="searchInput" class="hidden items-center mt-7 lg:min-w-72 md:mt-0 px-3 md:px-0 md:flex">
-                        <div class="h-10 w-full flex">
-                            <div class="relative w-full">
-                                <input type="search"  
-                                    class="relative block p-2.5 w-full flex-auto text-gray-900 bg-gray-100 rounded-full" 
-                                    placeholder="Vyhľadať faktúru, firmu, kontakt..." />
-                                <button type="submit" class="absolute top-1/2 end-0 transform -translate-y-1/2 
-                                flex bg-buttonblue items-center justify-center rounded-full mr-2 w-6 h-6">
-                                    <img class="w-5 h-5" src = "img\Search.svg" alt="Search SVG"/>
-                                </button>
+                    <div class="md:flex justify-end md:gap-5">
+                        <div id="searchInput" class="hidden items-center mt-7 md:min-w-72 md:mt-0 px-3 md:px-0 md:flex">
+                            <div class="h-10 w-full flex">
+                                <div class="relative w-full">
+                                    <input type="search"  
+                                        class="h-10 text-sm relative block p-2.5 w-full flex-auto text-gray-900 bg-gray-100 rounded-full" 
+                                        placeholder="Vyhľadať faktúru, firmu, kontakt..." />
+                                    <button type="submit" class="absolute top-1/2 end-0 transform -translate-y-1/2 
+                                    flex bg-buttonblue items-center justify-center rounded-full mr-2 w-6 h-6">
+                                        <img class="w-5 h-5" src = "img\Search.svg" alt="Search SVG"/>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="md:flex items-center bg-white text-black text-smdd justify-end">
-                        <div class="md:flex md:justify-center font-normal">
-                            <a href="/" class="hidden md:flex items-center pr-1">
-                                <img class="w-4 h-4" src = "img\Help.svg" alt="Help SVG"/>
-                                <span class="px-1">
-                                    Nápoveda
-                                </span>
-                            </a>
-                            <a href="/" id="companyId" class="flex justify-between md:visible md:justify-center shadow-md py-4 md:py-0 md:shadow-none border-t-2 md:border-t-0 md:border-x-2 border-menuborder px-1">
-                                <div class="flex items-center">
-                                    <img class="w-5 h-5 md:w-4 md:h-4 bg-navbg md:bg-white p-1 md:p-0 rounded-full md:rounded-none" src = "img\Company.svg" alt="Company SVG"/>
+                        <div class="md:flex items-center bg-white text-black text-smdd justify-end">
+                            <div class="md:flex md:justify-center font-normal">
+                                <a href="/" class="hidden md:flex items-center pr-1">
+                                    <img class="w-4 h-4" src = "img\Help.svg" alt="Help SVG"/>
                                     <span class="px-1">
-                                        The Walt Disney Company
+                                        Nápoveda
                                     </span>
-                                </div>
-                                <img class="w-4 h-4" src = "img\Arrow.svg" alt="Arrow SVG"/>
-                            </a>
-                            <a href="/" class="hidden md:flex items-center pl-1">
-                                <img class="w-4 h-4" src = "img\Avatar.svg" alt="Avatar SVG"/>
-                                <span class="px-1">
-                                    Môj profil
-                                </span>
-                                <img class="w-4 h-4" src = "img\Arrow.svg" alt="Arrow SVG"/>
-                            </a>
+                                </a>
+                                <a href="/" id="companyId" class="flex justify-between md:visible md:justify-center shadow-md py-4 md:py-0 md:shadow-none border-t-2 md:border-t-0 md:border-x-2 border-menuborder px-1">
+                                    <div class="flex items-center">
+                                        <img class="w-5 h-5 md:w-4 md:h-4 bg-navbg md:bg-white p-1 md:p-0 rounded-full md:rounded-none" src = "img\Company.svg" alt="Company SVG"/>
+                                        <span class="px-1">
+                                            The Walt Disney Company
+                                        </span>
+                                    </div>
+                                    <img class="w-4 h-4" src = "img\Arrow.svg" alt="Arrow SVG"/>
+                                </a>
+                                <a href="/" class="hidden md:flex items-center pl-1">
+                                    <img class="w-4 h-4" src = "img\Avatar.svg" alt="Avatar SVG"/>
+                                    <span class="px-1">
+                                        Môj profil
+                                    </span>
+                                    <img class="w-4 h-4" src = "img\Arrow.svg" alt="Arrow SVG"/>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <nav id="mainNavbar"  class="md:bg-navbg hidden md:h-12 h-auto w-full md:flex justify-between items-center md:px-20 lg:px-52">
+            <nav id="mainNavbar"  class="md:bg-navbg hidden md:h-12 h-auto w-full md:flex justify-between items-center md:px-20 lg:px-30">
                 <div class="md:flex justify-start md:h-12 h-auto w-full text-navtext gap-3 text-sm font-bold">
                     <button onclick="isHidden()" class="menuItem">
                         <div class="insideMenuItem">
@@ -87,7 +89,7 @@
                             </div>
                         </button>
                         <div id="subNavbar" class="absolute hidden left-0 w-full">
-                            <div class="bg-navhover flex h-12 w-full justify-between items-center text-subnavtext md:px-20 lg:px-52">
+                            <div class="bg-navhover flex h-12 w-full justify-start items-center text-subnavtext md:px-20 lg:px-30">
                                 <div class="group submenustyle">
                                     <span class="text-center">Faktúry</span>
                                     <div class="triangle"></div>
